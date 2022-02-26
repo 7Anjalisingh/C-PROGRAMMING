@@ -1,0 +1,54 @@
+#include<conio.h>
+#include<fstream.h>
+#include<iostream.h>
+#include<stdio.h>
+ viod reverse(char str[])
+ {
+   char ch;
+   ofstream ofs;
+   ofs.open("happy.txt",ios: :out)
+    for(int i=0;str[i]!='\0';
+     ofs.put(str[i]);
+     }
+   int pos =ofs.tellp();
+   ofs.close();
+   
+   ifstream ifs;
+   ifs.open("happy.txt",ios: :in);
+   ofstream ofs1;
+   ofs1.open("happy2.txt",ios: :ou
+   ifs.seekg(--pos);
+   
+   while(pos>=0)
+   {
+    ifs.get(ch);
+    ofs1.put(ch);
+    pos--;
+    ifs.seekg(pos):
+    }
+    ifs.close();
+    ofs1.close();
+    
+    ifstream ifs1;
+    ifs1.open("happy2.txt",ios: :in)
+    
+    while(!ifs1.eof())
+    {
+    ifs1.get(ch);
+    printf("ch");
+    }
+    ifs1.close();
+    }
+    
+    int main()
+    {
+    clrscr();
+    printf("example 1:(happy for)");
+    reverse("happy for happy");
+    
+    printf("\n example 2:(reverse)");
+    reverse("reverse");
+    
+    getch();
+    return 0;
+  }
